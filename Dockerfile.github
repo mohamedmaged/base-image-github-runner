@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y curl jq libgtk2.0-0 libgtk-3-0 libgbm-d
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 COPY github-actions-runner/entrypoint.sh ./entrypoint.sh
 RUN chmod +x ./entrypoint.sh
